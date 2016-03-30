@@ -11,6 +11,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    //set view cursor
+    view->viewport()->setCursor(Qt::CrossCursor);
+
     //translate mouse events to graphicsscene
     view->setMouseTracking(true);
     connect(scene, SIGNAL(mouseMove(QPointF)), this, SLOT(sceneMouseMove(QPointF)));
