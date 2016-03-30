@@ -11,11 +11,12 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = polygon-test-task
 TEMPLATE = app
 
-
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    polygonscene.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    polygonscene.h
 
 FORMS    += mainwindow.ui
 
