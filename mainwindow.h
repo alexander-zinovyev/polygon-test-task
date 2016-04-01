@@ -19,6 +19,13 @@ public:
     ~MainWindow();
 public slots:
     void sceneMouseMove(QPointF scenePos);
+    void sceneAllowedComplete(bool allowed);
+    void scenePolygonCalculated(bool convex, float area);
+
+private slots:
+    void on_actionReset_triggered();
+
+    void on_actionComplete_triggered();
 
 private:
     Ui::MainWindow *ui;
