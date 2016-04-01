@@ -1,7 +1,11 @@
 #include "polygonscene.h"
 #include <QGraphicsEllipseItem>
 
-PolygonScene::PolygonScene(QObject *parent) : QGraphicsScene(0, 0, 450, 450, parent)
+PolygonScene::PolygonScene(QObject *parent) : QGraphicsScene(0, 0, 450, 450, parent),
+                                              completed(false),
+                                              endLine(nullptr),
+                                              nextLine(nullptr),
+                                              potentialEndingLine(nullptr)
 {
     this->setAllowedToComplete(false);
     this->installEventFilter(this);
